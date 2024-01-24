@@ -1,0 +1,7 @@
+ARG_ENABLE('fstopwatch', 'fstopwatch support', 'no');
+
+if (PHP_FSTOPWATCH != 'no') {
+	AC_DEFINE('HAVE_FSTOPWATCH', 1, 'fstopwatch support enabled');
+
+	EXTENSION('fstopwatch', 'fstopwatch.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
