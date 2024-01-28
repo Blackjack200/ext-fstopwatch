@@ -43,7 +43,7 @@ static inline void print(zend_function *fbc) {
 
 static inline void print_time(zend_function *fbc, double time) {
     if (fbc->common.scope) {
-        printf("[->] THREAD=%s DEPTH=%lld SCOPE=%s::%s() TIME=%d\n",
+        printf("[<-] THREAD=%s DEPTH=%lld SCOPE=%s::%s() TIME=%fs\n",
                pthread_main_np() != 0 ? "MAIN" : "OTHER",
                FSTOPWATCH_G(call_depth),
                ZSTR_VAL(fbc->common.scope->name),
@@ -51,7 +51,7 @@ static inline void print_time(zend_function *fbc, double time) {
                time
         );
     } else {
-        printf("[->] THREAD=%s DEPTH=%lld SCOPE=%s() TIME=%d\n",
+        printf("[<-] THREAD=%s DEPTH=%lld SCOPE=%s() TIME=%fs\n",
                pthread_main_np() != 0 ? "MAIN" : "OTHER",
                FSTOPWATCH_G(call_depth),
                ZSTR_VAL(fbc->common.function_name),

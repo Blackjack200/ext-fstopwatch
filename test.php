@@ -1,12 +1,13 @@
 <?php
-namespace foefkeo{
+namespace wow{
 class A {
 function a():void{
     static $i=0;
-    if($i++ > 7) {
-    return;}
+    if(++$i >= 2) {
+    return;
+    }
         var_dump(null);
-    sleep(1);
+    usleep(300000);
     $this->a();
 
 }
