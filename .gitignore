@@ -39,3 +39,7 @@ tests/**/*.sh
 tests/**/*.db
 tests/**/*.mem
 tmp-php.ini
+.idea
+*.dep
+cmake-build-debug
+CMakeLists.txt

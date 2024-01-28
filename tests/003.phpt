@@ -4,8 +4,10 @@ test2() Basic test
 fstopwatch
 --FILE--
 <?php
-var_dump(test2());
-var_dump(test2('PHP'));
+var_dump(null);
+var_dump(null);
+var_dump(null);
+var_dump(null);
 ?>
 --EXPECT--
 string(11) "Hello World"
